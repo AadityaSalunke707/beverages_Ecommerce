@@ -1,0 +1,128 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures footer stays at the bottom */
+}
+
+/* Container for Fixed Width */
+.container {
+    flex: 1; /* Allow container to grow and take available space */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: center; /* Center the logo */
+    padding: 20px 0;
+    background-color: #ffeddb;
+}
+
+.header-center .logo {
+    width: 150px; /* Logo width */
+}
+
+/* Main Content Section */
+.city-list {
+    flex: 1; /* Allow the city list to grow */
+    padding: 20px 0;
+    overflow-y: auto; /* Enable vertical scrolling for the entire list */
+}
+
+.scrollable-container {
+    display: grid; /* Use CSS Grid */
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    gap: 20px; /* Space between items */
+    max-height: 100%; /* Full height of the parent */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 10px; /* Add padding */
+}
+
+.city-item {
+    padding: 15px; /* Padding for each city name */
+    background-color: #fff; /* Background color for city item */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth hover effect */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.city-item:hover {
+    background-color: #f09a9d; /* Highlight color on hover */
+    transform: scale(1.02); /* Slight scale on hover */
+    color: white; /* Change text color on hover */
+}
+
+/* Footer Section */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background-color: #ffeddb;
+}
+
+.back-button-circle {
+    background-color: #f09a9d;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.back-button-circle:hover {
+    background-color: #e8767b; /* Darker shade on hover */
+    transform: scale(1.1); /* Slight scale on hover */
+}
+
+
+/* Add spacing between regions */
+.region {
+    margin-bottom: 30px; /* Adds space between each region */
+}
+
+.region h3 {
+    margin-bottom: 10px; /* Adds space between the region title and city items */
+}
+
+/* Other existing styles... */
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+    }
+
+    .scrollable-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+    }
+
+    .city-item {
+        padding: 10px; /* Smaller padding for mobile view */
+        font-size: 0.9em; /* Smaller font size for mobile view */
+    }
+}
+
+@media (max-width: 480px) {
+    .scrollable-container {
+        grid-template-columns: 1fr; /* One column on extra small screens */
+    }
+}

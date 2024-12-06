@@ -1,0 +1,154 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Container for Fixed Width */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background-color: #ffeddb;
+    position: relative;
+}
+
+.logo-link .logo {
+    width: 150px; /* Logo width */
+}
+
+.back-button {
+    position: absolute; 
+    left: 20px; 
+    font-size: 16px;
+    color: #f09a9d; 
+    text-decoration: none;
+}
+
+/* Banner Section */
+.banner {
+    position: relative;
+    text-align: center;
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* Optional: Limit max height */
+    object-fit: cover; /* Ensure image covers the area */
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.banner-text h1 {
+    font-size: 36px;
+}
+
+.banner-text p {
+    font-size: 18px;
+}
+
+/* Team Members Section */
+.team {
+    display: flex;
+    flex-direction: column; /* Stack vertically on smaller screens */
+    gap: 15px; /* Reduced space between members */
+    padding: 40px 0;
+}
+
+.member {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    gap: 15px; /* Space between image and info */
+    border: 1px solid #ddd; /* Optional: Add a border */
+    padding: 10px; /* Optional: Add padding */
+    border-radius: 8px; /* Rounded corners */
+}
+
+.image-container {
+    flex: 1; /* Make image take up equal space */
+}
+
+.member-image {
+    width: 120px; /* Increased size for member images */
+    height: 120px; /* Increased size for member images */
+    border-radius: 50%; /* Circular image */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.member-info {
+    flex: 2; /* Info takes more space */
+}
+
+.member-info h2 {
+    color: #f09a9d; 
+    margin-bottom: 5px;
+    font-size: 1.2em; /* Smaller heading size */
+}
+
+.member-info p {
+    line-height: 1.4;
+    font-size: 0.9em; /* Smaller paragraph size */
+}
+
+/* Footer Section */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background-color: #ffeddb; 
+    position: relative;
+}
+
+.back-button-circle {
+    background-color: #f09a9d; 
+    color: white;
+    border-radius: 50%; 
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.back-button-circle:hover {
+    background-color: #e8767b; 
+    transform: scale(1.1); 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .team {
+        flex-direction: column; /* Stack members vertically on smaller screens */
+    }
+
+    .member {
+        flex-direction: column; /* Stack image and info */
+    }
+}
